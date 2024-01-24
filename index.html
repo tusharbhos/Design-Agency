@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ABC Studio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-grid.rtl.css">
@@ -20,8 +22,68 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.rtl.css">
     <link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
+
 <body>
-    
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                ABC Studio
+            </a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our work</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <!-- <div class="links">
+                <a href="#" class="active">Sign up</a>
+                <a href="#">Login</a>
+            </div> -->
+            <button class="bi bi-list menu-button"></button>
+        </div>
+    </nav>
+    <section class="section_first">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-white m-5">Elevating Digital Experiences</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-white m-3">At ABC Studio, we take pride in offering a holistic approach to digital solutions. Our services
+                        encompass meticulous research, cutting-edge design, and robust coding to deliver seamless and
+                        impactful digital experiences.</p>
+                </div>
+                <svg width="1200" height="459" viewBox="0 0 1200 459" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect width="1200" height="459" rx="8" fill="#0C0C0C"/> </svg>
+            </div>
+        </div>
+    </section>
+    <script>
+        const headerRect = document.querySelector(".container").getBoundingClientRect();
+        const button = document.querySelector(".menu-button")
+
+        button.addEventListener("click", (event) => {
+            var navbar = document.querySelector(".navbar");
+            if (navbar.style.height) {
+                navbar.style.height = null;
+                event.target.classList.replace("bi-x", "bi-list");
+            } else {
+                navbar.style.height = `${headerRect.height + 60}px`;
+                event.target.classList.replace("bi-list", "bi-x");
+            }
+        })
+    </script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.esm.js"></script>
+    <script src="assets/js/bootstrap.esm.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
 </body>
+
 </html>
